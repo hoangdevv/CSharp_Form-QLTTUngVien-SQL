@@ -1,0 +1,11 @@
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.exe.config
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.exe
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.pdb
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.AssemblyReference.cache
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.FormTimUngVien.resources
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.FormUngTuyen.resources
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.Properties.Resources.resources
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.GenerateResource.cache
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CoreCompileInputs.cache
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.exe
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.pdb
