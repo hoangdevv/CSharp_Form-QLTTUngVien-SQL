@@ -48,19 +48,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 37);
+            this.label1.Location = new System.Drawing.Point(97, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vị trí ứng tuyển";
             // 
             // cbbLocation
             // 
+            this.cbbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLocation.FormattingEnabled = true;
-            this.cbbLocation.Location = new System.Drawing.Point(165, 37);
+            this.cbbLocation.Location = new System.Drawing.Point(220, 46);
+            this.cbbLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbLocation.Name = "cbbLocation";
-            this.cbbLocation.Size = new System.Drawing.Size(294, 21);
+            this.cbbLocation.Size = new System.Drawing.Size(477, 24);
             this.cbbLocation.TabIndex = 1;
+            this.cbbLocation.SelectedIndexChanged += new System.EventHandler(this.cbbLocation_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -71,41 +75,50 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(165, 103);
+            this.groupBox1.Location = new System.Drawing.Point(220, 127);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(654, 188);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(872, 231);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mô tả";
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(166, 88);
+            this.txtSalary.Location = new System.Drawing.Point(221, 108);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(193, 20);
+            this.txtSalary.ReadOnly = true;
+            this.txtSalary.Size = new System.Drawing.Size(256, 22);
             this.txtSalary.TabIndex = 1;
             // 
             // txtSkill
             // 
-            this.txtSkill.Location = new System.Drawing.Point(166, 142);
+            this.txtSkill.Location = new System.Drawing.Point(221, 175);
+            this.txtSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSkill.Name = "txtSkill";
-            this.txtSkill.Size = new System.Drawing.Size(475, 20);
+            this.txtSkill.ReadOnly = true;
+            this.txtSkill.Size = new System.Drawing.Size(632, 22);
             this.txtSkill.TabIndex = 1;
             // 
             // txtRequiredExp
             // 
-            this.txtRequiredExp.Location = new System.Drawing.Point(166, 36);
+            this.txtRequiredExp.Location = new System.Drawing.Point(221, 44);
+            this.txtRequiredExp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRequiredExp.Name = "txtRequiredExp";
-            this.txtRequiredExp.Size = new System.Drawing.Size(193, 20);
+            this.txtRequiredExp.ReadOnly = true;
+            this.txtRequiredExp.Size = new System.Drawing.Size(256, 22);
             this.txtRequiredExp.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(19, 145);
+            this.label4.Location = new System.Drawing.Point(25, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(32, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Skill";
             // 
@@ -113,9 +126,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 91);
+            this.label3.Location = new System.Drawing.Point(25, 112);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mức lương";
             // 
@@ -123,26 +137,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 39);
+            this.label2.Location = new System.Drawing.Point(25, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 13);
+            this.label2.Size = new System.Drawing.Size(167, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Yêu cầu kinh nghiệm ít nhất";
             // 
             // dataGridViewConform
             // 
             this.dataGridViewConform.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewConform.Location = new System.Drawing.Point(165, 308);
+            this.dataGridViewConform.Location = new System.Drawing.Point(220, 379);
+            this.dataGridViewConform.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewConform.Name = "dataGridViewConform";
-            this.dataGridViewConform.Size = new System.Drawing.Size(654, 278);
+            this.dataGridViewConform.RowHeadersWidth = 51;
+            this.dataGridViewConform.Size = new System.Drawing.Size(872, 342);
             this.dataGridViewConform.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 292);
+            this.label5.Location = new System.Drawing.Point(97, 359);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ứng viên phù hợp";
             // 
@@ -151,9 +169,10 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.Blue;
-            this.btnCancel.Location = new System.Drawing.Point(613, 592);
+            this.btnCancel.Location = new System.Drawing.Point(817, 729);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(85, 36);
+            this.btnCancel.Size = new System.Drawing.Size(113, 44);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Trở lại";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -163,18 +182,19 @@
             this.btnExport.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.ForeColor = System.Drawing.Color.Blue;
-            this.btnExport.Location = new System.Drawing.Point(738, 592);
+            this.btnExport.Location = new System.Drawing.Point(984, 729);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(81, 36);
+            this.btnExport.Size = new System.Drawing.Size(108, 44);
             this.btnExport.TabIndex = 4;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = false;
             // 
             // FormTimUngVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 638);
+            this.ClientSize = new System.Drawing.Size(1171, 785);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dataGridViewConform);
@@ -182,8 +202,10 @@
             this.Controls.Add(this.cbbLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormTimUngVien";
             this.Text = "FormTimUngVien";
+            this.Load += new System.EventHandler(this.FormTimUngVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConform)).EndInit();

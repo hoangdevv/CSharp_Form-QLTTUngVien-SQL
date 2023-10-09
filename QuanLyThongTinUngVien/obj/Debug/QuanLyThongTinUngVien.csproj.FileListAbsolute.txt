@@ -9,3 +9,19 @@ D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTi
 D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CoreCompileInputs.cache
 D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.exe
 D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.pdb
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.exe.config
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.exe
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\QuanLyThongTinUngVien.pdb
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.AssemblyReference.cache
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.FormTimUngVien.resources
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.FormUngTuyen.resources
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.Properties.Resources.resources
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.GenerateResource.cache
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CoreCompileInputs.cache
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.exe
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.pdb
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.dll
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.xml
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CopyComplete
