@@ -1,4 +1,4 @@
-namespace QuanLyThongTinUngVien.Models
+namespace QuanLyThongTinUngVien.Model
 {
     using System;
     using System.Collections.Generic;
@@ -12,8 +12,8 @@ namespace QuanLyThongTinUngVien.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Skill()
         {
-            Job = new HashSet<Job>();
-            Candidate = new HashSet<Candidate>();
+            Jobs = new HashSet<Job>();
+            Candidates = new HashSet<Candidate>();
         }
 
         [Key]
@@ -23,9 +23,9 @@ namespace QuanLyThongTinUngVien.Models
         public string SkillName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Job> Job { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Candidate> Candidate { get; set; }
+        public virtual ICollection<Candidate> Candidates { get; set; }
     }
 }

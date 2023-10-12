@@ -1,7 +1,8 @@
-namespace QuanLyThongTinUngVien.Models
+﻿namespace QuanLyThongTinUngVien.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -12,7 +13,7 @@ namespace QuanLyThongTinUngVien.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Candidate()
         {
-            Skill = new HashSet<Skill>();
+            Skills = new HashSet<Skill>();
         }
 
         [Key]
@@ -20,17 +21,21 @@ namespace QuanLyThongTinUngVien.Models
 
         [Required]
         [StringLength(250)]
+        [DisplayName("Họ và tên")]
         public string FullName { get; set; }
 
         [Required]
         [StringLength(50)]
+        [DisplayName("Email")]
         public string EmailAddress { get; set; }
 
+        [DisplayName("Kinh nghiệm")]
         public int? WorkExperienceYear { get; set; }
 
+        [DisplayName("Mức lương")]
         public int? ExpectedSalary { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Skill> Skill { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
     }
 }

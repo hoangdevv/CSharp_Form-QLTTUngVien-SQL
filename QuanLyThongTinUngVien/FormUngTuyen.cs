@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyThongTinUngVien.Models;
+using QuanLyThongTinUngVien.Model;
 
 namespace QuanLyThongTinUngVien
 {
@@ -19,28 +19,12 @@ namespace QuanLyThongTinUngVien
         {
             InitializeComponent();
         }
-
-        private void tìmỨngViênPhùHợpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormTimUngVien formTimUngVien = new FormTimUngVien();
-            formTimUngVien.ShowDialog();
-        }
-
-        private void FormUngTuyen_Load(object sender, EventArgs e)
-        {
-            List<Skill> listSkill = model.Skill.ToList();
-            checkedLBSkill.DataSource = listSkill;
-            checkedLBSkill.DisplayMember = "SkillName";
-            checkedLBSkill.ValueMember = "SkillNo";
-
-            LoadData();
-        }
-
+        #region Method
         private void LoadData()
         {
             try
             {
-                List<Candidate> listCandidate = model.Candidate.ToList();
+                List<Candidate> listCandidate = model.Candidates.ToList();
                 var displayCandidates = listCandidate.Select(p => new
                 {
                     p.CVNo,
@@ -57,6 +41,55 @@ namespace QuanLyThongTinUngVien
             }
         }
 
+        private bool IsValidEmail(string email)
+        {
+            // dinh dang email
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+            return System.Text.RegularExpressions.Regex.IsMatch(email, pattern);
+        }
+
+        void clearInput()
+        {
+            txtFullName.Clear();txtEmail.Clear();txtNumberExperience.Clear();txtSalary.Clear();
+            for(int i = 0; i < checkedLBSkill.Items.Count; i++)
+            {
+                checkedLBSkill.SetItemChecked(i, false);
+            }
+        }
+        
+        bool checkInput()
+        {
+            if (txtFullName.Text == "" || txtNumberExperience.Text == "" || txtSalary.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return false;
+            }
+            if(!int.TryParse(txtSalary.Text,out int resurtSalary )||!int.TryParse(txtNumberExperience.Text,out int resurtNEx))
+            {
+                MessageBox.Show("Nhập đúng định dạng số tiền hoặc số năm kn");
+                return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region Event
+        private void FormUngTuyen_Load(object sender, EventArgs e)
+        {
+            List<Skill> listSkill = model.Skills.ToList();
+            checkedLBSkill.DataSource = listSkill;
+            checkedLBSkill.DisplayMember = "SkillName";
+            checkedLBSkill.ValueMember = "SkillNo";
+
+            LoadData();
+        }
+
+        private void tìmỨngViênPhùHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTimUngVien formTimUngVien = new FormTimUngVien();
+            formTimUngVien.ShowDialog();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             using (var transaction = model.Database.BeginTransaction())
@@ -64,15 +97,17 @@ namespace QuanLyThongTinUngVien
                 try
                 {
                     string email = txtEmail.Text.Trim();
-
-                    //kiểm tra định dạng mail
+                    if (!checkInput())
+                    {
+                        return;
+                    }
                     if(IsValidEmail(email) == false)
                     {
                         MessageBox.Show("Sai định dạng email!");
                         return;
                     }
-
-                    Candidate emailCandidate = model.Candidate.FirstOrDefault(p => p.EmailAddress == email);
+                   
+                    Candidate emailCandidate = model.Candidates.FirstOrDefault(p => p.EmailAddress == email);
                     if (emailCandidate != null)
                     {
 
@@ -81,16 +116,17 @@ namespace QuanLyThongTinUngVien
                         emailCandidate.WorkExperienceYear = int.Parse(txtNumberExperience.Text);
                         emailCandidate.ExpectedSalary = int.Parse(txtSalary.Text);
 
-                        emailCandidate.Skill.Clear(); //xoá dữ liệu cũ để thêm dữ liệu mới
+                        emailCandidate.Skills.Clear(); //xoá dữ liệu cũ để thêm dữ liệu mới
                         foreach (var skill in checkedLBSkill.CheckedItems.OfType<Skill>())
                         {
-                            emailCandidate.Skill.Add(skill);
+                            emailCandidate.Skills.Add(skill);
                         }
 
                         model.SaveChanges();
                         LoadData();
                         MessageBox.Show("Cập nhật thành công!");
                         transaction.Commit();
+                        clearInput();
                     }
                     else
                     {
@@ -103,14 +139,16 @@ namespace QuanLyThongTinUngVien
                         };
                         foreach (var item in checkedLBSkill.CheckedItems.OfType<Skill>())
                         {
-                            AddCandidte.Skill.Add(item);
+                            AddCandidte.Skills.Add(item);
                         }
-                        model.Candidate.Add(AddCandidte);
+                        model.Candidates.Add(AddCandidte);
                         model.SaveChanges();
                         LoadData();
                         MessageBox.Show("Thêm thành công!");
                         transaction.Commit();
+                        clearInput();
                     }
+                   
                 }
                 catch (Exception)
                 {
@@ -120,33 +158,27 @@ namespace QuanLyThongTinUngVien
             }
         }
 
-        private bool IsValidEmail(string email)
-        {
-            // Đây là một biểu thức chính quy cơ bản để kiểm tra định dạng email.
-            // Bạn có thể sử dụng biểu thức chính quy phức tạp hơn để kiểm tra định dạng email chính xác hơn.
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
-            return System.Text.RegularExpressions.Regex.IsMatch(email, pattern);
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
                 string email = txtEmail.Text.Trim();
-                Candidate emailCandidate = model.Candidate.FirstOrDefault(p => p.EmailAddress == email);
+                Candidate emailCandidate = model.Candidates.FirstOrDefault(p => p.EmailAddress == email);
                 if (emailCandidate != null)
                 {
-                    // Xóa ứng viên từ cơ sở dữ liệu
-                    Candidate candidateToDelete = model.Candidate.FirstOrDefault(c => c.EmailAddress == email);
-                    if (candidateToDelete != null)
+                    if(MessageBox.Show("Chắc chắn xóa?","Xác nhận",MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        model.Candidate.Remove(candidateToDelete);
+                        model.Candidates.Remove(emailCandidate);
                         model.SaveChanges();
+                        LoadData();
+                        MessageBox.Show("Xoá thành công!");
+                        clearInput();
                     }
-
-                    // Tải lại dữ liệu vào dataGridViewMain
-                    LoadData();
-                    MessageBox.Show("Xoá thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu để xóa!");
                 }
             }
             catch (Exception ex)
@@ -189,10 +221,10 @@ namespace QuanLyThongTinUngVien
 
                     //lấy dữ liệu từ trường Skill trong Candidate
                     int selectedCVNo = int.Parse(row.Cells["CVNo"].Value.ToString());
-                    Candidate selectedCandidate = model.Candidate.FirstOrDefault(p => p.CVNo == selectedCVNo);
+                    Candidate selectedCandidate = model.Candidates.FirstOrDefault(p => p.CVNo == selectedCVNo);
                     if (selectedCandidate != null)
                     {
-                        foreach (Skill skill in selectedCandidate.Skill)
+                        foreach (Skill skill in selectedCandidate.Skills)
                         {
                             int index = checkedLBSkill.Items.IndexOf(skill);
                             if (index >= 0)
@@ -208,5 +240,19 @@ namespace QuanLyThongTinUngVien
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormUngTuyen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn thoát","Xác nhận",MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel=false;
+            }
+        }
+        #endregion
+
     }
 }

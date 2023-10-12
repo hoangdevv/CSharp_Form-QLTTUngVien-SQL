@@ -25,3 +25,8 @@ D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\E
 D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.xml
 D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\bin\Debug\EntityFramework.SqlServer.xml
 D:\Code\Winform C#\CSharp_Form-QLTTUngVien-SQL\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CopyComplete
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\EntityFramework.dll
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\EntityFramework.xml
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hutech\C#\QuanLyThongTinUngVien\QuanLyThongTinUngVien\obj\Debug\QuanLyThongTinUngVien.csproj.CopyComplete

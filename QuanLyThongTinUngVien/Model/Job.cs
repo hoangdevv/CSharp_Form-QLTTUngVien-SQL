@@ -1,4 +1,4 @@
-namespace QuanLyThongTinUngVien.Models
+namespace QuanLyThongTinUngVien.Model
 {
     using System;
     using System.Collections.Generic;
