@@ -74,7 +74,7 @@
             this.btnDelete.Location = new System.Drawing.Point(253, 339);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 33);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -84,21 +84,21 @@
             this.txtSalary.Location = new System.Drawing.Point(141, 169);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(118, 21);
-            this.txtSalary.TabIndex = 7;
+            this.txtSalary.TabIndex = 4;
             // 
             // txtNumberExperience
             // 
             this.txtNumberExperience.Location = new System.Drawing.Point(141, 128);
             this.txtNumberExperience.Name = "txtNumberExperience";
             this.txtNumberExperience.Size = new System.Drawing.Size(118, 21);
-            this.txtNumberExperience.TabIndex = 7;
+            this.txtNumberExperience.TabIndex = 3;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(141, 86);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(192, 21);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 2;
             // 
             // label1
             // 
@@ -133,7 +133,7 @@
             this.txtFullName.Location = new System.Drawing.Point(141, 44);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(192, 21);
-            this.txtFullName.TabIndex = 7;
+            this.txtFullName.TabIndex = 1;
             // 
             // btnUpdate
             // 
@@ -229,7 +229,7 @@
             this.checkedLBSkill.Margin = new System.Windows.Forms.Padding(2);
             this.checkedLBSkill.Name = "checkedLBSkill";
             this.checkedLBSkill.Size = new System.Drawing.Size(192, 84);
-            this.checkedLBSkill.TabIndex = 9;
+            this.checkedLBSkill.TabIndex = 5;
             // 
             // menuStrip1
             // 
